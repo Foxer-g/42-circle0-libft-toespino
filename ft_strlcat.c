@@ -6,36 +6,28 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:01:55 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/16 17:52:04 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/17 16:18:11 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlenbis(const char *c)
-{
-	size_t	i;
-
-	i = 0;
-	while (c[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len;
+	size_t	lenbis;
 	size_t	i;
 
 	len = ft_strlen(dst);
+	lenbis = ft_strlen((char *)src);
 	i = 0;
-	while (src[i] || i < size)
+	if (size <= len)
+		return (size + lenbis);
+	while (src[i] && i + len + 1 < size)
 	{
 		dst[len + i] = src[i];
 		i++;
 	}
 	dst[len + i] = '\0';
-	return (len + ft_strlenbis(src));
+	return (len + lenbis);
 }

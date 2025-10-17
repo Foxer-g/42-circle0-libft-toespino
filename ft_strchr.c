@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 18:27:00 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/16 18:16:05 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/17 16:35:25 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*dest;
 	int		i;
+	int		lens;
 
-	dest = "";
 	i = 0;
-	while (s[i])
+	dest = NULL;
+	lens = ft_strlen((char *)s) + 1;
+	while (i < lens)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			dest = (char *)&s[i];
 			break ;
 		}
+		i++;
 	}
 	return (dest);
 }
