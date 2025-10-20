@@ -18,7 +18,9 @@ OBJ = ft_isalpha.o \
 	ft_strchr.o\
 	ft_strrchr.o\
 	ft_strncmp.o\
-	ft_memchr.o
+	ft_memchr.o\
+	ft_memcmp.o\
+	ft_strnstr.o\
 
 all : $(NAME)
 

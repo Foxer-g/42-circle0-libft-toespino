@@ -6,14 +6,14 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:30:27 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/16 15:08:22 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/19 14:01:49 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isascii(int chr)
+int	ft_isascii(int c)
 {
-	if (chr >= 0 && chr <= 127)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}

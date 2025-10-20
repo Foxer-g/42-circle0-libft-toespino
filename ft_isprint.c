@@ -6,14 +6,14 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:30:27 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/16 15:08:40 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/19 14:10:07 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isprint(int chr)
+int	ft_isprint(int c)
 {
-	if (chr >= 32 && chr <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}

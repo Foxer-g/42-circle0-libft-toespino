@@ -6,14 +6,14 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:30:27 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/16 15:07:31 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/19 14:09:16 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isdigit(int chr)
+int	ft_isdigit(int c)
 {
-	if (chr >= 48 && chr <= 57)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}

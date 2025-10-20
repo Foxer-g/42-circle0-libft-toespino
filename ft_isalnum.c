@@ -6,16 +6,16 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:30:27 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/16 15:18:03 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/19 14:02:12 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int chr)
+int	ft_isalnum(int c)
 {
-	if ((chr >= 48 && chr <= 57) || (chr >= 65 && chr <= 90)
-		|| (chr >= 97 && chr <= 122))
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90)
+		|| (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
