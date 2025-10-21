@@ -21,6 +21,7 @@ OBJ = ft_isalpha.o \
 	ft_memchr.o\
 	ft_memcmp.o\
 	ft_strnstr.o\
+	ft_atoi.o\
 
 all : $(NAME)
 
