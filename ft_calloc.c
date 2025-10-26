@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: toespino <toespino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 18:27:00 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/22 16:57:29 by toespino         ###   ########.fr       */
+/*   Created: 2025/10/22 12:30:46 by toespino          #+#    #+#             */
+/*   Updated: 2025/10/23 14:18:33 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char			*dest;
-	size_t			i;
-	unsigned char	*temp;
-
-	i = 0;
-	dest = NULL;
-	temp = (void *)s;
-	while (i < n)
+	size_t	mas;
+	void	*res;
+	
+	if (nmemb > 0 && size > SIZE_MAX / nmemb)
 	{
-		if (temp[i] == (unsigned char)c)
-		{
-			dest = (char *)s + i;
-			break ;
-		}
-		i++;
+		return (0);
 	}
-	return (dest);
+	mas = nmemb * size;
+	res = malloc(mas);
+	if (!res)
+		return (NULL);
+	ft_memset(res, '\0', mas);
+	return (res);
 }

@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wextra -Wall -Werror
+CFLAGS = -Wextra -Wall -Werror 
 NAME = libft.a
 OBJ = ft_isalpha.o \
 	ft_isdigit.o \
@@ -22,6 +22,9 @@ OBJ = ft_isalpha.o \
 	ft_memcmp.o\
 	ft_strnstr.o\
 	ft_atoi.o\
+	ft_calloc.o\
+	ft_strdup.o\
+	ft_substr.o\
 
 all : $(NAME)
 
