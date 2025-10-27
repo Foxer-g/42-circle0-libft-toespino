@@ -6,7 +6,7 @@
 /*   By: toespino <toespino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 12:30:46 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/23 14:18:33 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:45:25 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	mas;
 	void	*res;
-	
+
 	if (nmemb > 0 && size > SIZE_MAX / nmemb)
 	{
 		return (0);

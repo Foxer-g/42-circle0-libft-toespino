@@ -26,6 +26,7 @@ OBJ = ft_isalpha.o \
 	ft_strdup.o\
 	ft_substr.o\
 	ft_strjoin.o\
+	ft_strtrim.o\
 
 all : $(NAME)
 
@@ -44,5 +45,5 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re $(NAME)
-
+.SILENT :
 
