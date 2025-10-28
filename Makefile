@@ -27,6 +27,7 @@ OBJ = ft_isalpha.o \
 	ft_substr.o\
 	ft_strjoin.o\
 	ft_strtrim.o\
+	ft_split.o\
 
 all : $(NAME)
 

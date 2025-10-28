@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:02:11 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/22 14:16:57 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/28 18:50:10 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	to_find = (char *)little;
 	if (ft_strlen(to_find) == 0)
 		return (str);
-	while (str[i] && i < len)
+	while (str[i++] && i < len)
 	{
 		j = 0;
 		if (str[i] == to_find[j])
@@ -37,7 +37,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 					return (&str[i]);
 			}
 		}
-		i++;
 	}
 	return (0);
 }

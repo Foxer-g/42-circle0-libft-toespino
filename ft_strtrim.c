@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 13:38:37 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/28 11:50:20 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/28 18:47:44 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int	ft_isset(char c, const char *set)
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 	char	*out;
 
 	if (!s1 || !set)
@@ -40,6 +40,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 		i++;
 	while (i < len && ft_isset(s1[len - 1], set))
 		len--;
-	out = ft_substr(s1, i, len-i);
+	out = ft_substr(s1, i, len - i);
 	return (out);
 }
