@@ -6,7 +6,7 @@
 /*   By: toespino <toespino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 18:14:31 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/26 12:04:14 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:52:05 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	int		lens;
 
 	out = malloc(len + 1);
-	lens = ft_strlen((char *)s);
 	if (!out)
 		return (NULL);
+	lens = ft_strlen((char *)s);
 	if (start > (unsigned int)lens)
 	{
 		out[0] = '\0';
