@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 12:58:25 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/29 14:15:18 by toespino         ###   ########.fr       */
+/*   Created: 2025/10/29 15:56:32 by toespino          #+#    #+#             */
+/*   Updated: 2025/10/29 16:15:12 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	*out;
-	int		i;
-	int		j;
 
-	i = 0;
-	j = 0;
-	out = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	if (fd < 1)
+		return ;
+	out = ft_itoa(n);
 	if (!out)
-		return (NULL);
-	while (s1[i])
-	{
-		out[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		out[i] = s2[j];
-		i++;
-		j++;
-	}
-	return (out);
+		return ;
+	ft_putstr_fd(out, fd);
+	free(out);
+	return ;
 }
