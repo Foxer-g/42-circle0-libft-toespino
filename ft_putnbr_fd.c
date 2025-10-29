@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 15:56:32 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/29 16:15:12 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:33:40 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	*out;
 
-	if (fd < 1)
+	if (fd < 0)
 		return ;
 	out = ft_itoa(n);
 	if (!out)

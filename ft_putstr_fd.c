@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 15:49:36 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/29 16:09:56 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:44:40 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	i =	0;
-	if (fd < 1 || !s)
+	i = 0;
+	if (fd < 0 || !s)
 		return ;
 	while (s[i])
 	{
