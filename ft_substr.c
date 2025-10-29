@@ -17,17 +17,16 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	char	*out;
 	size_t	lens;
 
-	lens = ft_strlen((char *)s);
-	if (lens < len)
-		len = lens;
+	if (!s)
+		return (NULL);
+	lens = ft_strlen(s);
+	if (start >= lens)
+		return (ft_strdup(""));
+	if (lens - start < len)
+		len = lens - start;
 	out = malloc(len + 1);
 	if (!out)
 		return (NULL);
-	if (start > (unsigned int)lens)
-	{
-		out[0] = '\0';
-		return (out);
-	}
 	ft_strlcpy(out, &s[start], len + 1);
 	return (out);
 }

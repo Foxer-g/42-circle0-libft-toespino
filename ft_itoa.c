@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:27:35 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/29 15:11:45 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/29 19:32:43 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,38 +36,29 @@ static size_t	ft_lennbr(int nbr)
 	return (out);
 }
 
-static void	ft_putnbr(int nbr, char *s, int i)
-{
-	if (nbr == -2147483648)
-	{
-		s[i] = '8';
-		nbr = nbr / 10;
-		i--;
-	}
-	if (nbr < 0)
-	{
-		nbr *= -1;
-		s[0] = '-';
-	}
-	while (nbr > 9)
-	{
-		s[i] = (nbr % 10) + 48;
-		nbr = nbr / 10;
-		i--;
-	}
-	s[i] = nbr + 48;
-	return ;
-}
-
 char	*ft_itoa(int n)
 {
 	char	*out;
 	size_t	len_nbr;
+	long	n_b;
 
 	len_nbr = ft_lennbr(n);
-	out = ft_calloc(len_nbr, sizeof(char *));
+	n_b = (long)n;
+	out = ft_calloc(len_nbr + 1, sizeof(char));
 	if (!out)
 		return (NULL);
-	ft_putnbr(n, out, len_nbr - 1);
+	if (n < 0)
+	{
+		n_b *= -1;
+		out[0] = '-';
+	}
+	len_nbr--;
+	while (n_b > 9)
+	{
+		out[len_nbr] = (n_b % 10) + 48;
+		n_b = n_b / 10;
+		len_nbr--;
+	}
+	out[len_nbr] = n_b + 48;
 	return (out);
 }
