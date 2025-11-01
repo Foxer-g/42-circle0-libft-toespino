@@ -6,13 +6,13 @@
 /*   By: toespino <toespino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 22:18:29 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/31 13:04:33 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/31 23:18:34 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+struct t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 

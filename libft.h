@@ -6,7 +6,7 @@
 /*   By: toespino <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:01:14 by toespino          #+#    #+#             */
-/*   Updated: 2025/10/30 22:57:30 by toespino         ###   ########.fr       */
+/*   Updated: 2025/10/31 22:01:59 by toespino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ typedef struct	s_list
 	struct s_list	*next;
 }					t_list;
 
-t_list *ft_lstnew(void *content);
+struct s_list	*ft_lstnew(void *content);
 #endif
