@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -fPIC -Wextra -Wall -Werror 
+CFLAGS = -Wextra -Wall -Werror 
 NAME = libft.a
 OBJ = ft_isalpha.o \
 	ft_isdigit.o \
@@ -37,13 +37,22 @@ OBJ = ft_isalpha.o \
 	ft_putnbr_fd.o\
 
 OBJ_BONUS = ft_lstnew.o\
+	ft_lstadd_front.o\
+	ft_lstsize.o\
+	ft_lstlast.o\
+	ft_lstadd_back.o\
+	ft_lstdelone.o\
+	ft_lstclear.o\
+	ft_lstiter.o\
+	ft_lstmap.o\
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
-bonus : $(OBJ_BONUS) $(NAME)
 
+bonus : $(OBJ_BONUS) $(NAME)
+	ar -rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 %.o : %.c
 	$(CC) $(CFLAGS) $< -c -o $@
 
